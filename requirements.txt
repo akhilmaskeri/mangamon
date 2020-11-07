@@ -1,6 +1,0 @@
-argparse
-requests
-bs4
-img2pdf
-pathlib
-tabulate

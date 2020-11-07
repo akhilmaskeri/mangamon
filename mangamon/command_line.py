@@ -36,6 +36,11 @@ def main():
 
 	args = parser.parse_args(argv[1:])
 
+	if len(sys.argv) == 1:
+		parser.print_help(sys.stdout)
+		exit()
+
+
 	if args.name:
 
 		manga = Manga(args.name)
@@ -98,4 +103,8 @@ def main():
 					parser.print_help(sys.stdout)
 
 	if args.search:
-		print(Manga.search(args.search))
+
+		search_result = Manga.search(args.search)
+		table = [(result["name"], result["artist"], result["route"][1:]) for result in search_result]
+		print(tabulate(table, tablefmt="plain"))
+		
