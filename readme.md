@@ -1,5 +1,4 @@
 # Mangamon
-
 Download Mangas from mangapanda.com into your terminal
 
 ### Options

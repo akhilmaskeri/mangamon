@@ -106,5 +106,5 @@ def main():
 
 		search_result = Manga.search(args.search)
 		table = [(result["name"], result["artist"], result["route"][1:]) for result in search_result]
-		print(tabulate(table, tablefmt="plain"))
+		print(tabulate(table, headers=["Title", "Artist", "Manga Name"]))
 		

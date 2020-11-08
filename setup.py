@@ -1,12 +1,19 @@
 import setuptools
+import os
 
 __version__ = "0.0.2"
+
+dir_name = os.path.abspath(os.path.dirname(__file__))
+
+with open(os.path.join(dir_name, "readme.md"), encoding="utf-8") as f:
+	long_description = f.read()
 
 setuptools.setup(
     name="mangamon",
     version=__version__,
     description="Manga Downloader",
-    long_description="Command line program to download mangas from mangapanda",
+    long_description_content_type='text/markdown',
+    long_description=long_description,
     url="https://github.com/akhilmaskeri/mangamon",
     author="akhil maskeri",
     author_email="akhil.maskeri@gmail.com",
@@ -16,7 +23,7 @@ setuptools.setup(
         'console_scripts': ["mangamon=mangamon.command_line:main"]
     },
     classifiers=[
-	    'Development Status :: 3 - Alpha',
+	'Development Status :: 3 - Alpha',
         'Programming Language :: Python',   
         'License :: Public Domain',
         'Environment :: Console',
