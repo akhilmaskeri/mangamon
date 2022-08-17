@@ -1,3 +1,5 @@
+`<< mangapanda does not exist anymore >>`
+
 # Mangamon
 Download Mangas from mangapanda.com into your terminal
 
